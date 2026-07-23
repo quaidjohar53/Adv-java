@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author quaid
+ *
+ */
+module ModulesPractice {
+}

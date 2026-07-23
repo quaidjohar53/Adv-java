@@ -1,0 +1,57 @@
+package com.rays.drone;
+
+public class TestDrone {
+
+    public static void main(String[] args) throws Exception {
+
+    // testAdd();
+
+     testUpdate();
+
+   //  testDelete();
+
+   
+	}
+    
+    public static void testAdd() throws Exception {
+
+        DroneModel model = new DroneModel();
+
+        DroneBean bean = new DroneBean();
+
+        bean.setDroneCode("DR101");
+        bean.setOperatorName("Rahul");
+        bean.setDeliveryZone("Indore");
+        bean.setStatus("Available");
+
+        model.add(bean);
+
+    }
+    
+    public static void testUpdate() throws Exception {
+
+        DroneModel model = new DroneModel();
+
+        DroneBean bean = new DroneBean();
+
+        bean.setDroneId(1);
+        bean.setDroneCode("DR101");
+        bean.setOperatorName("Rahul Sharma");
+        bean.setDeliveryZone("Bhopal");
+        bean.setStatus("Delivered");
+
+        model.update(bean);
+
+    }
+    public static void testDelete() throws Exception {
+
+        DroneModel model = new DroneModel();
+
+        DroneBean bean = new DroneBean();
+
+        bean.setDroneId(1);
+
+        model.delete(bean);
+
+    }
+}
