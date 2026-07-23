@@ -20,6 +20,7 @@ public class UserRegistrationCtl extends HttpServlet {
 			throws javax.servlet.ServletException, IOException {
 		RequestDispatcher rd = request.getRequestDispatcher("UserRegistrationView.jsp");
 		rd.forward(request, response);
+
 	}
 
 	@Override

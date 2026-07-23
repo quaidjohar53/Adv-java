@@ -26,14 +26,13 @@ public class UserModel {
 		return pk + 1;
 
 	}
-
 	public int add(UserBean bean) throws Exception {
 
-//		UserBean existsBean = findByLogin(bean.getLogin());
-//
-//		if (existsBean != null) {
-//			throw new DuplicateRecordException("email id already exists");
-//		}
+		UserBean existsBean = findByLogin(bean.getLogin());
+
+		if (existsBean != null) {
+			throw new Exception("email id already exists");
+		}
 
 		Connection conn = JDBCDataSource.getConnection();
 
@@ -55,7 +54,7 @@ public class UserModel {
 		return bean.getId();
 
 	}
-
+	
 	public UserBean authenticate(String login, String pwd) throws Exception {
 
 		Connection conn = JDBCDataSource.getConnection();
@@ -79,10 +78,5 @@ public class UserModel {
 			bean.setDob(rs.getDate(6));
 
 		}
-
-		conn.close();
-		pstmt.close();
-		return bean;
-
-	}
+	
 }
