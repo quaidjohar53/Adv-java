@@ -61,7 +61,7 @@ public class LoginCtl extends HttpServlet {
 			}
 
 		} catch (Exception e) {
-			// TODO: handle exception
+			   
 		}
 	}
 }

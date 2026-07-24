@@ -16,6 +16,7 @@
 	<div align="center">
 		<h1>
 			<a href="WelcomeCtl">Online Result System</a>
+			
 		</h1>
 	</div>
 </body>
